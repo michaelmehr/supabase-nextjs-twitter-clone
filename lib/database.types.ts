@@ -13,25 +13,25 @@ export interface Database {
         Row: {
           created_at: string
           id: number
-          tweet: string
+          tweet_id: string
           user_id: string
         }
         Insert: {
           created_at?: string
           id?: number
-          tweet: string
+          tweet_id: string
           user_id: string
         }
         Update: {
           created_at?: string
           id?: number
-          tweet?: string
+          tweet_id?: string
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "likes_tweet_fkey"
-            columns: ["tweet"]
+            foreignKeyName: "likes_tweet_id_fkey"
+            columns: ["tweet_id"]
             referencedRelation: "tweets"
             referencedColumns: ["id"]
           },
